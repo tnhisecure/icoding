@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/fav.jpeg" type="image/x-icon">
+    <title>Learn HTML - Table</title>
+
+    <style>
+        #mySidenav a {
+          position: absolute;
+          left: -14px;
+          transition: 0.3s;
+          padding: 3px;
+          width: 120px;
+          text-decoration: none;
+          font-size: 16px;
+          color: white;
+          border-radius: 0 5px 5px 0;
+          text-align: center;
+        }
+        #mySidenav a:nth-child(5),
+        #mySidenav a:nth-child(12),
+        #mySidenav a:nth-child(19) {
+        color: black;
+        }
+        #mySidenav a:hover {
+          left: -8px;
+        }
+        
+        #Intro {
+          top: 20px;
+          background-color: #EE82EE;
+        }
+        
+        #Elements {
+          top: 44px;
+          background-color:#4B0082;
+        }
+        
+        #Attributes {
+          top: 68px;
+          background-color: #0000FF;
+        }
+        
+        #Headings {
+          top: 92px;
+          background-color: #00FF00;
+        }
+        #Paragraphs {
+          top: 116px;
+          background-color: #FFFF00;
+        }
+        #Styles {
+          top: 140px;
+          background-color: #FFA500;
+        
+        }
+        #Format {
+          top: 164px;
+          background-color: #FF0000;
+        }
+        #Quotation {
+          top: 188px;
+          background-color: #EE82EE;
+        }
+        #Comments {
+          top: 212px;
+          background-color: #4B0082;
+        }
+        #Colors {
+          top: 236px;
+          background-color: #0000FF;
+        }
+        #CSS {
+          top: 260px;
+          background-color: #00FF00;
+        }
+        #Links {
+          top: 284px;
+          background-color: #FFFF00;
+        }
+        #Images {
+          top: 308px;
+          background-color: #FFA500;
+        }#Favicon {
+          top: 332px;
+          background-color: #FF0000;
+        }#Title {
+          top: 356px;
+          background-color: #EE82EE;
+        }#Tables {
+          top: 380px;
+          background-color: #4B0082;
+        }#Lists {
+          top: 404px;
+          background-color: #0000FF;
+        }
+        #Cla {
+          top: 428px;
+          background-color: #00FF00;
+        }#Iframes {
+          top: 452px;
+          background-color: #FFFF00;
+        }#Forms {
+          top: 476px;
+          background-color: #FFA500
+        }#Media {
+          top: 500px;
+          background-color: #FF0000;
+        }
+        #Entities {
+          top: 524px;
+          background-color: #EE82EE;
+        }
+        #Tags {
+          top: 548px;
+          background-color: #4B0082;
+        }
+        #Quiz {
+          top: 572px;
+          background-color: #0000FF;
+        }
+        
+        div.sidenav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+    text-align: center;
+  }
+  
+        
+        </style>
+        </head>
+        <body>
+<div id="mySidenav" class="sidenav">
+  <a href="index.html" id="Intro">Introduction</a>
+  <a href="elements.html" id="Elements">Elements</a>
+  <a href="attributes.html" id="Attributes">Attributes</a>
+  <a href="heading.html" id="Headings">Headings</a>
+  <a href="paragraphs.html" id="Paragraphs">Paragraphs</a>
+  <a href="styles.html" id="Styles">Styles</a>
+  <a href="format.html" id="Format">Formatting</a>
+  <a href="quotation.html" id="Quotation">Quotation</a>
+  <a href="comments.html" id="Comments">Comments</a>
+  <a href="color.html" id="Colors">Colors</a>
+  <a href="css.html" id="CSS">CSS</a>
+  <a href="links.html" id="Links">Links</a>
+  <a href="images.html" id="Images">Images</a>
+  <a href="favicon.html" id="Favicon">Favicon</a>
+  <a href="title.html" id="Title">Page Title</a>
+  <a href="tables.html" id="Tables">Tables</a>
+  <a href="lists.html" id="Lists">Lists</a>
+  <a href="classes.html" id="Cla">Classes & ID</a>
+  <a href="iframes.html" id="Iframes">Iframes</a>
+  <a href="forms.html" id="Forms">Forms</a>
+  <a href="media.html" id="Media">Media</a>
+  <a href="entities.html" id="Entities">Entities</a>
+  <a href="tags.html" id="Tags">Tags</a>
+  <a href="quiz.html" id="Quiz">Quiz</a>
+
+</div>
+
+<div style="margin-left:180px;margin-right:190px;">
+    <h1 style="text-align: center; text-decoration: underline;">HTML Table Tags </h1>
+    <h3 style="text-align: center; text-decoration: underline;">Tag	Description </h3>
+
+ 
+
+  <table id="customers">
+      
+      <thead>
+          <tr>
+              <th>Tag name</th>
+              <th>Description</th>
+              
+              
+          </tr>
+      </thead>
+      <tbody>
+         
+        
+          <tr>
+              <td>&lt;table&gt;</td>
+              <td>Defines a table</td>
+            
+          </tr>
+          <tr>
+            <td>&lt;th&gt;</td>
+            <td>Defines a header cell in a table</td>
+          
+        </tr>
+        <tr>
+            <td>&lt;tr&gt;</td>
+            <td>Defines a row in a table</td>
+          
+        </tr>
+       
+        <tr>
+            <td>&lt;caption&gt;</td>
+            <td>Defines a table caption</td>
+          
+        </tr>
+        <tr>
+            <td>&lt;colgroup&gt;</td>
+            <td>Specifies a group of one or more columns in a table for formatting</td>
+          
+        </tr>
+        <tr>
+            <td>&lt;col&gt;</td>
+            <td>Specifies column properties for each column within a &lt;col&gt; element</td>
+          
+        </tr>
+        <tr>
+            <td>&lt;thead&gt;</td>
+            <td>Groups the header content in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>Groups the body content in a table</td>
+        </tr>
+        <tr>
+            <td>&lt;tfoot&gt;</td>
+            <td>Groups the footer content in a table
+    
+            </td>
+        </tr>
+      </tbody>
+  </table>
+  <br>
+  <p style="font-size:18px;">
+    &#10038;&nbsp&nbspHTML tables allow web developers to arrange data into rows and columns.<br>
+     &#10038;&nbsp&nbspA table in HTML consists of table cells inside rows and columns.<br>
+     &#10038;&nbsp&nbspEach table cell is defined by a &lt;td&gt; and a &lt;/td&gt; tag.<br>
+     &#10038;&nbsp&nbsptd stands for table data.<br>
+     &#10038;&nbsp&nbspEverything between &lt;td&gt; and &lt;/td&gt; are the content of the table cell.<br>
+     &#10038;&nbsp&nbspA table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc.<br>
+     &#10038;&nbsp&nbspEach table row starts with a &lt;tr&gt; and ends with a &lt;/tr&gt; tag.<br>
+     &#10038;&nbsp&nbsptr stands for table row.<br>
+     &#10038;&nbsp&nbspSometimes you want your cells to be table header cells. In those cases use the <th> tag instead of the <td> tag:<br>
+     &#10038;&nbsp&nbspth stands for table header.<br>
+</p>
+<br>
+<h2>
+    HTML Table Borders
+</h2>
+  <p>
+    <ul>
+        <li type ="squre">HTML tables can have borders of different styles and shapes.</li>
+        <li ype ="squre">To add a border, use the CSS border property on table, th, and td elements:</li>
+    </ul>
+    
+    
+    <img src="image/tbl1.jpg" alt="Table Border" width="1200" height="150">
+    <img src="image/tbl2.jpg" alt="Table Border" width="1200" height="150">
+    <ul>
+
+        <li>To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.</li>
+        <li>This will make the borders collapse into a single border:</li>
+        <img src="image/tbl3.jpg" alt="Table Border" width="1200" height="150">
+        <img src="image/tbl4.jpg" alt="Table Border" width="1200" height="150">
+    </ul>
+    
+    <h3>Style Table Borders</h3>
+    <p>If you set a background color of each cell, and give the border a white color (the same as the document background), 
+        you get the impression of an invisible border:</p>
+
+        <img src="image/tbl5.jpg" alt="Table Border" width="1200" height="150">
+        <img src="image/tbl6.jpg" alt="Table Border" width="1000" height="150">
+        <h3>Round Table Borders</h3>
+    <p>With the border-radius property, the borders get rounded corners:</p>
+    <img src="image/tbl7.jpg" alt="Table Border" width="1200" height="150">
+    <img src="image/tbl8.jpg" alt="Table Border" width="1200" height="150">
+    <img src="image/tbl9.jpg" alt="Table Border" width="1200" height="450">
+    <p>
+        With the <em><strong>border-style</strong>
+            </em> property, you can set the appearance of the border.
+    </p>
+    <img src="image/tbl10.jpg" alt="Table Border" width="1200" height="150">
+    The following values are allowed:
+
+<ul>
+    <li>dotted</li>
+    <li>dashed</li>
+    <li>solid</li>
+    <li>double</li>
+    <li>groove</li>
+    <li>ridge</li>
+    <li>inset</li>
+    <li>outset</li>
+    <li>none</li>
+    <li>hidden</li>
+</ul>
+<img src="image/tbl11.jpg" alt="Table Border" width="1200" height="80">
+<h3>Border Color</h3>
+
+With the <strong><em>border-color</em></strong> property, you can set the color of the border.
+<img src="image/tbl12.jpg" alt="Table Border" width="1200" height="450">
+<h3>HTML Table Sizes</h3>
+<p> HTML tables can have different sizes for each column, row or the entire table.<br>
+    Use the style attribute with the width or height properties to specify the size of a table, row or column.
+    <img src="image/tbl13.jpg" alt="Table Border" width="1200" height="150">
+    Example<br>
+    Set the width of the first column to 70%:<br>
+    Set the height of the second row to 200 pixels:
+</p>
+<style>
+    table, th, td {
+      border:1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+    <body>
+    
+    <table style="width:100%">
+      <tr>
+        <th style="width:70%">ITEM NAME</th>
+        <th>QUANTITY</th> 
+        <th>PRICE</th>
+      </tr>
+      <tr style="height:200px">
+        <td style="text-align:center">Jill</td>
+        <td style="text-align:center">1000</td>
+        <td style="text-align:center">5000</td>
+      </tr>
+      <tr>
+        <td>Discount</td>
+        <td></td>
+        <td style="color:red">100</td>
+      </tr>
+      <tr>
+        <td>Net Amount</td>
+        <td></td>
+        <td style="text-align:center;color:green;background-color:pink; border-radius:10px;">4900</td>
+      </tr>
+    </table>
+<h3>You can copy the code below from the clipboard</h3>
+    <!-- clipboard code -->
+    
+  
+
+<textarea id="myInput" rows="30" cols="152" >
+   
+   
+   
+    
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th style="width:70%">ITEM NAME</th>
+    <th>QUANTITY</th> 
+    <th>PRICE</th>
+  </tr>
+  <tr style="height:200px">
+    <td style="text-align:center">Jill</td>
+    <td style="text-align:center">1000</td>
+    <td style="text-align:center">5000</td>
+  </tr>
+  <tr>
+    <td>Discount</td>
+    <td></td>
+    <td style="color:red">100</td>
+  </tr>
+  <tr>
+    <td>Net Amount</td>
+    <td></td>
+    <td style="text-align:center;color:green;background-color:pink; border-radius:10px;">4900</td>
+  </tr>
+</table>
+
+
+
+
+
+    </textarea><br>
+   
+   <center><button onclick="myFunction()">Copy text</button></center>
+   
+   <script>
+   function myFunction() {
+     // Get the text field
+     var copyText = document.getElementById("myInput");
+   
+     // Select the text field
+     copyText.select();
+     copyText.setSelectionRange(0, 99999); // For mobile devices
+   
+     // Copy the text inside the text field
+     navigator.clipboard.writeText(copyText.value);
+     
+     // Alert the copied text
+     alert("Copied the text: " + copyText.value);
+   }
+   </script>
+ 
+   <br><br> 
+
+   <h3>Vertical Table Headers</h3>
+   <p> To use the first column as table headers, define the first cell in each row as a &lt;th&gt; element:</p>
+   <img src="image/tbl14.jpg" alt="Table Border" width="800" height="80">
+   <!-- clipboard -->
+   <textarea id="myInput" rows="30" cols="152" >
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h2>Vertical Table Headers</h2>
+        
+        <p>The first column becomes table headers if you set the first table cell in each table row to a TH element:</p>
+        
+        <table style="width:100%">
+          <tr>
+            <th>Firstname</th>
+            <td>Jill</td>
+            <td>Eve</td>
+          </tr>
+          <tr>
+            <th>Lastname</th>
+            <td>Smith</td>
+            <td>Jackson</td>
+          </tr>
+          <tr>
+            <th>Age</th>  
+            <td>50</td>
+            <td>94</td>
+          </tr>
+        </table>
+   </textarea><br>
+  
+  <center><button onclick="myFunction()">Copy text</button></center>
+  
+  <script>
+  function myFunction() {
+    // Get the text field
+    var copyText = document.getElementById("myInput");
+  
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+  
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+    
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+  }
+  </script>
+<h3>HTML Table Padding & Spacing</h3>
+<p>HTML tables can adjust the padding inside the cells, and also the space between the cells.<br></p>
+<u>HTML Table - Cell Padding</u>
+<ul>
+  <li>Cell padding is the space between the cell edges and the cell content.</li>
+
+  <li>By default the padding is set to 0.</li>
+  <li>To add padding on table cells, use the CSS padding property:</li>
+</ul>
+<img src="image/tbl15.jpg" alt="Table Border" width="900" height="250">
+  <!-- clipboard -->
+  <textarea id="myInput" rows="30" cols="152" >
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 15px;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <h2>Cellpadding</h2>
+      <p>Cell padding specifies the space between the cell content and its borders.</p>
+      
+      <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th> 
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>80</td>
+        </tr>
+      </table>
+  </textarea><br>
+ 
+ <center><button onclick="myFunction()">Copy text</button></center>
+ 
+ <script>
+ function myFunction() {
+   // Get the text field
+   var copyText = document.getElementById("myInput");
+ 
+   // Select the text field
+   copyText.select();
+   copyText.setSelectionRange(0, 99999); // For mobile devices
+ 
+   // Copy the text inside the text field
+   navigator.clipboard.writeText(copyText.value);
+   
+   // Alert the copied text
+   alert("Copied the text: " + copyText.value);
+ }
+ </script>
+    
+  
+<p>To add padding only above the content, use the padding-top property.<br>
+
+  And the others sides with the padding-bottom, padding-left, and padding-right properties:</p>
+  <img src="image/tbl16.jpg" alt="Table Border" width="900" height="250">
+  <!-- clipboard -->
+  <textarea id="myInput" rows="30" cols="152" >
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 100px;
+        padding-right: 0px;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <h2>Cellpadding - top - bottom - left - right </h2>
+      <p>We can specify different padding for all fours sides of the cell content.</p>
+      
+      <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th> 
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>80</td>
+        </tr>
+      </table>
+  </textarea><br>
+ 
+ <center><button onclick="myFunction()">Copy text</button></center>
+ 
+ <script>
+ function myFunction() {
+   // Get the text field
+   var copyText = document.getElementById("myInput");
+ 
+   // Select the text field
+   copyText.select();
+   copyText.setSelectionRange(0, 99999); // For mobile devices
+ 
+   // Copy the text inside the text field
+   navigator.clipboard.writeText(copyText.value);
+   
+   // Alert the copied text
+   alert("Copied the text: " + copyText.value);
+ }
+ </script>
+
+ <u>HTML Table - Cell Spacing</u>
+ <ul>
+  <li>Cell spacing is the space between each cell.</li>
+  <li>By default the space is set to 2 pixels.</li>
+  <li>To change the space between table cells, use the CSS border-spacing property on the table element:</li>
+ </ul>
+ <img src="image/tbl17.jpg" alt="Table Border" width="900" height="250">
+ <!-- clipboard -->
+ <textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    table {
+      border-spacing: 30px;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Cellspacing</h2>
+    <p>Change the space between the cells with the border-spacing property.</p>
+    
+    <table style="width:100%">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+    
+ </textarea><br>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+<h3>HTML Table Colspan & Rowspan</h3>
+<p>HTML tables can have cells that span over multiple rows and/or columns.</p>
+<img src="image/tbl18.jpg" alt="Table Border" width="600" height="70">
+<!-- clipboard -->
+<textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Cell that spans two columns</h2>
+    <p>To make a cell span more than one column, use the colspan attribute.</p>
+    
+    <table style="width:100%">
+      <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>43</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>57</td>
+      </tr>
+    </table>
+</textarea><br>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+ // Get the text field
+ var copyText = document.getElementById("myInput");
+
+ // Select the text field
+ copyText.select();
+ copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ 
+ // Alert the copied text
+ alert("Copied the text: " + copyText.value);
+}
+</script>
+<p>To make a cell span over multiple rows, use the rowspan attribute:</p>
+<img src="image/tbl19.jpg" alt="Table Border" width="600" height="70">
+<textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Cell that spans two rows</h2>
+    <p>To make a cell span more than one row, use the rowspan attribute.</p>
+    
+    <table style="width:100%">
+      <tr>
+        <th>Name</th>
+        <td>Jill</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Phone</th>
+        <td>555-1234</td>
+      </tr>
+      <tr>
+        <td>555-8745</td>
+      </tr>
+    </table>  
+</textarea><br>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+ // Get the text field
+ var copyText = document.getElementById("myInput");
+
+ // Select the text field
+ copyText.select();
+ copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ 
+ // Alert the copied text
+ alert("Copied the text: " + copyText.value);
+}
+</script>
+<h3>HTML Table Styling</h3>
+<img src="image/tbl20.jpg" alt="Table Border" width="1000" height="300">
+<!-- clipboard -->
+<textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    th:nth-child(even),td:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Striped Table</h2>
+    <p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</p>
+    
+    <table style="width:100%">
+      <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+</textarea><br>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+ // Get the text field
+ var copyText = document.getElementById("myInput");
+
+ // Select the text field
+ copyText.select();
+ copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ 
+ // Alert the copied text
+ alert("Copied the text: " + copyText.value);
+}
+</script>
+<img src="image/tbl21.jpg" alt="Table Border" width="1000" height="300">
+<!-- clipboard -->
+<textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Zebra Striped Table</h2>
+    <p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</p>
+    
+    <table>
+      <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+      </tr>
+      <tr>
+      <td>Peter</td>
+      <td>Griffin</td>
+      <td>$100</td>
+      </tr>
+      <tr>
+      <td>Lois</td>
+      <td>Griffin</td>
+      <td>$150</td>
+      </tr>
+      <tr>
+      <td>Joe</td>
+      <td>Swanson</td>
+      <td>$300</td>
+      </tr>
+      <tr>
+      <td>Cleveland</td>
+      <td>Brown</td>
+      <td>$250</td>
+      </tr>
+    </table>
+    
+</textarea><br>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+ // Get the text field
+ var copyText = document.getElementById("myInput");
+
+ // Select the text field
+ copyText.select();
+ copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ 
+ // Alert the copied text
+ alert("Copied the text: " + copyText.value);
+}
+</script>
+<img src="image/tbl22.jpg" alt="Table Border" width="1000" height="300">
+<!-- clipboard -->
+<textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(150, 212, 212, 0.4);
+    }
+    
+    th:nth-child(even),td:nth-child(even) {
+      background-color: rgba(150, 212, 212, 0.4);
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Striped Table</h2>
+    <p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</p>
+    
+    <table style="width:100%">
+      <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+</textarea><br>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+ // Get the text field
+ var copyText = document.getElementById("myInput");
+
+ // Select the text field
+ copyText.select();
+ copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ 
+ // Alert the copied text
+ alert("Copied the text: " + copyText.value);
+}
+</script>
+<img src="image/tbl23.jpg" alt="Table Border" width="1000" height="250">
+<textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    tr {
+      border-bottom: 1px solid #ddd;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Bordered Table Dividers</h2>
+    <p>Add the border-bottom property to the tr elements for horizontal dividers:</p>
+    
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      <th>Savings</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+      </tr>
+      <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+      </tr>
+    </table>
+    
+</textarea><br>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+ // Get the text field
+ var copyText = document.getElementById("myInput");
+
+ // Select the text field
+ copyText.select();
+ copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ 
+ // Alert the copied text
+ alert("Copied the text: " + copyText.value);
+}
+</script>
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+  }
+  
+  tr:hover {background-color: #D6EEEE;}
+  </style>
+  </head>
+  <body>
+  
+  <h2>Hoverable Table</h2>
+  <p>Move the mouse over the table rows to see the effect.</p>
+  
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Peter</td>
+      <td>Griffin</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>Lois</td>
+      <td>Griffin</td>
+      <td>$150</td>
+    </tr>
+    <tr>
+      <td>Joe</td>
+      <td>Swanson</td>
+      <td>$300</td>
+    </tr>
+    <tr>
+      <td>Cleveland</td>
+      <td>Brown</td>
+      <td>$250</td>
+    </tr>
+  </table>
+  <br><br><br>
+<textarea id="myInput" rows="30" cols="152" >
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #DDD;
+    }
+    
+    tr:hover {background-color: #D6EEEE;}
+    </style>
+    </head>
+    <body>
+    
+    <h2>Hoverable Table</h2>
+    <p>Move the mouse over the table rows to see the effect.</p>
+    
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+      </tr>
+      <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+      </tr>
+    </table>
+</textarea><br>
+
+  
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+function myFunction() {
+ // Get the text field
+ var copyText = document.getElementById("myInput");
+
+ // Select the text field
+ copyText.select();
+ copyText.setSelectionRange(0, 99999); // For mobile devices
+
+ // Copy the text inside the text field
+ navigator.clipboard.writeText(copyText.value);
+ 
+ // Alert the copied text
+ alert("Copied the text: " + copyText.value);
+}
+</script>
+<h3>HTML Table Colgroup</h3>
+<p>If you want to style the two first columns of a table, use the <colgroup> and <col> elements.</p>
+  <ul>
+    <li>The &lt;colgroup&gt; element should be used as a container for the column specifications.</li>
+
+      <li>Each group is specified with a <col> element.</li>
+      
+      <li>The span attribute specifies how many columns that get the style.</li>
+      
+     <li>The style attribute specifies the style to give the columns.</li>
+  </ul>
+</div>
+</body>
+</html> 
+
+
+
+
+
