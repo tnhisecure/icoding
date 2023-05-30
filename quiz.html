@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="image/fav.jpeg" type="image/x-icon">
+  <title>Learn HTML - Quizes</title>
+
+  <style>
+    #mySidenav a {
+      position: absolute;
+      left: -14px;
+      transition: 0.3s;
+      padding: 3px;
+      width: 120px;
+      text-decoration: none;
+      font-size: 16px;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      text-align: center;
+    }
+
+    #mySidenav a:nth-child(5),
+    #mySidenav a:nth-child(12),
+    #mySidenav a:nth-child(19) {
+      color: black;
+    }
+
+    #mySidenav a:hover {
+      left: -8px;
+    }
+
+    #Intro {
+      top: 20px;
+      background-color: #9400D3;
+    }
+
+    #Elements {
+      top: 44px;
+      background-color: #4B0082;
+    }
+
+    #Attributes {
+      top: 68px;
+      background-color: #0000FF;
+    }
+
+    #Headings {
+      top: 92px;
+      background-color: #00FF00;
+    }
+
+    #Paragraphs {
+      top: 116px;
+      background-color: #FFFF00;
+    }
+
+    #Styles {
+      top: 140px;
+      background-color: #FFA500;
+
+    }
+
+    #Format {
+      top: 164px;
+      background-color: #FF0000;
+    }
+
+    #Quotation {
+      top: 188px;
+      background-color: #9400D3;
+    }
+
+    #Comments {
+      top: 212px;
+      background-color: #4B0082;
+    }
+
+    #Colors {
+      top: 236px;
+      background-color: #0000FF;
+    }
+
+    #CSS {
+      top: 260px;
+      background-color: #00FF00;
+    }
+
+    #Links {
+      top: 284px;
+      background-color: #FFFF00;
+    }
+
+    #Images {
+      top: 308px;
+      background-color: #FFA500;
+    }
+
+    #Favicon {
+      top: 332px;
+      background-color: #FF0000;
+    }
+
+    #Title {
+      top: 356px;
+      background-color: #9400D3;
+    }
+
+    #Tables {
+      top: 380px;
+      background-color: #4B0082;
+    }
+
+    #Lists {
+      top: 404px;
+      background-color: #0000FF;
+    }
+
+    #Cla {
+      top: 428px;
+      background-color: #00FF00;
+    }
+
+    #Iframes {
+      top: 452px;
+      background-color: #FFFF00;
+    }
+
+    #Forms {
+      top: 476px;
+      background-color: #FFA500
+    }
+
+    #Media {
+      top: 500px;
+      background-color: #FF0000;
+    }
+
+    #Entities {
+      top: 524px;
+      background-color: #9400D3;
+    }
+
+    #Tags {
+      top: 548px;
+      background-color: #4B0082;
+    }
+
+    #Quiz {
+      top: 572px;
+      background-color: #0000FF;
+    }
+
+    div.sidenav {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+
+    /* 1st table css property */
+    table {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+
+
+      border-top-width: 5px;
+      border-top-style: dashed;
+      border-top-color: #0000FF;
+
+      border-right-width: 10px;
+      border-right-style: double;
+      border-right-color: #00FF00;
+
+      border-bottom-width: 5px;
+      border-bottom-style: dotted;
+      border-bottom-color: #ff0090;
+
+      border-left-width: 5px;
+      border-left-style: solid;
+      border-left-color: #a51eee;
+    }
+
+    td {
+      border: 1px solid red;
+      border-radius: 10px;
+    }
+
+    td.fristRow:hover {
+      background-color: #00FF00;
+      color: #FFF;
+
+    }
+
+    td.secondRow:hover {
+      background-color: rgb(199, 54, 204);
+      text-decoration: underline;
+
+    }
+
+    td.thirdRow:hover {
+      color: #FFF;
+
+    }
+
+    td.forthRow:hover {
+      color: rgb(96, 203, 91);
+
+    }
+
+    td.fifthRow:hover {
+      border-color: rgb(96, 203, 91);
+      color: #FFF;
+    }
+
+    td.sixthRow:hover {
+      border-color: rgb(45, 38, 145);
+      border-style: double;
+      border-width: 5px;
+      text-align: right;
+    }
+
+    td.seventhRow:hover {
+
+      border-style: dashed;
+      border-width: 5px;
+      text-align: right;
+    }
+
+    td.eighthRow:hover {
+
+      border-style: dotted;
+      border-width: 5px;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="index.html" id="Intro">Introduction</a>
+    <a href="elements.html" id="Elements">Elements</a>
+    <a href="attributes.html" id="Attributes">Attributes</a>
+    <a href="heading.html" id="Headings">Headings</a>
+    <a href="paragraphs.html" id="Paragraphs">Paragraphs</a>
+    <a href="styles.html" id="Styles">Styles</a>
+    <a href="format.html" id="Format">Formatting</a>
+    <a href="quotation.html" id="Quotation">Quotation</a>
+    <a href="comments.html" id="Comments">Comments</a>
+    <a href="color.html" id="Colors">Colors</a>
+    <a href="css.html" id="CSS">CSS</a>
+    <a href="links.html" id="Links">Links</a>
+    <a href="images.html" id="Images">Images</a>
+    <a href="favicon.html" id="Favicon">Favicon</a>
+    <a href="title.html" id="Title">Page Title</a>
+    <a href="tables.html" id="Tables">Tables</a>
+    <a href="lists.html" id="Lists">Lists</a>
+    <a href="classes.html" id="Cla">Classes & ID</a>
+    <a href="iframes.html" id="Iframes">Iframes</a>
+    <a href="forms.html" id="Forms">Forms</a>
+    <a href="media.html" id="Media">Media</a>
+    <a href="entities.html" id="Entities">Entities</a>
+    <a href="tags.html" id="Tags">Tags</a>
+    <a href="quiz.html" id="Quiz">Quiz</a>
+
+  </div>
+
+  <div style="margin-left:180px;margin-right:190px;">
+    <h2><u>
+        <center>Learn HTML - Quizes</center>
+      </u></h2>
+
+    <h3><span style='font-size:30px;'>&#9755;</span> 1. Write Code to make this table?</h3>
+    <table class="center">
+      <tr>
+        <td class="fristRow" colspan="6" style="text-align: right;">
+          <marquee>TestTestTestTest</marquee>
+        </td>
+      </tr>
+      <tr>
+        <td class="secondRow" colspan="2" rowspan="2">TestTestTestTest</td>
+        <td class="thirdRow" style="text-align: center;background-color: #0000FF;">TestTestTestTest</td>
+        <td class="forthRow" style="text-align: center;background-color: #FFFF00;">TestTestTestTest</td>
+        <td class="fifthRow">TestTestTestTest</td>
+        <td class="sixthRow">TestTestTestTest</td>
+      </tr>
+      <tr>
+        <td class="secondRow" colspan="2" rowspan="2" style="text-align: center;">TestTestTestTest</td>
+        <td class="sixthRow">TestTestTestTest</td>
+        <td class="fifthRow">TestTestTestTest</td>
+      </tr>
+      <tr>
+        <td class="seventhRow">TestTestTestTest</td>
+        <td class="eighthRow">TestTestTestTest</td>
+        <td class="secondRow" colspan="2" rowspan="2" style="text-align: right;">TestTestTestTest</td>
+      </tr>
+      <tr>
+        <td class="eighthRow">TestTestTestTest</td>
+        <td class="seventhRow">TestTestTestTest</td>
+        <td class="forthRow" style="text-align: center;background-color: #FFFF00;">TestTestTestTest</td>
+        <td class="thirdRow" style="text-align: center; background-color: #0000FF;">TestTestTestTest</td>
+      </tr>
+      <tr>
+        <td class="fristRow" colspan="6">
+          <marquee direction="right">TestTestTestTest</marquee>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+    <h5>This is the code of<span style='font-size:50px;'>&#9757;</span> table:</h5>
+
+    <textarea id="myInput" rows="30" cols="152"><style>
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height:200px;
+    border-radius: 10px;
+  
+    border-top-width: 5px;
+    border-top-style: dashed;
+    border-top-color: #0000FF;
+  
+    border-right-width: 10px;
+    border-right-style: double;
+    border-right-color: #00FF00;
+  
+    border-bottom-width: 5px;
+    border-bottom-style: dotted;
+    border-bottom-color: #ff0090;
+  
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #a51eee;
+  }
+  
+  td{
+    border: 1px solid red;
+    border-radius: 10px;
+  }
+  
+  td.fristRow:hover{
+    background-color: #00FF00;
+    color: #FFF;
+   
+    
+  }
+  td.secondRow:hover{
+    background-color: rgb(199, 54, 204);
+    text-decoration: underline;
+    
+  }
+  td.thirdRow:hover{
+    color: #FFF;
+    
+  }
+  td.forthRow:hover{
+    color: rgb(96, 203, 91);
+    
+  }
+  td.fifthRow:hover{
+    border-color: rgb(96, 203, 91);
+    color:#FFF;
+  }
+  td.sixthRow:hover{
+    border-color: rgb(45, 38, 145);
+    border-style: double;
+    border-width: 5px;
+    text-align: right;
+  } 
+  td.seventhRow:hover{
+    
+    border-style: dashed;
+    border-width: 5px;
+    text-align: right;
+  }
+  td.eighthRow:hover{
+    
+    border-style: dotted;
+    border-width: 5px;
+    text-align: right;
+  }     
+  
+  </style>
+
+  <table class="center">
+    <tr>
+    <td class="fristRow" colspan="6" style="text-align: right;"><marquee>TestTestTestTest</marquee></td>
+    </tr>
+    <tr>
+        <td class="secondRow" colspan="2" rowspan="2">TestTestTestTest</td>
+    <td  class="thirdRow" style="text-align: center;background-color: #0000FF;">TestTestTestTest</td>
+    <td  class="forthRow" style="text-align: center;background-color: #FFFF00;">TestTestTestTest</td>
+    <td class="fifthRow">TestTestTestTest</td>
+    <td class="sixthRow">TestTestTestTest</td>
+    </tr>
+    <tr>
+    <td class="secondRow" colspan="2" rowspan="2" style="text-align: center;">TestTestTestTest</td>
+    <td class="sixthRow">TestTestTestTest</td>
+    <td class="fifthRow">TestTestTestTest</td>
+    </tr>
+    <tr>
+    <td class="seventhRow">TestTestTestTest</td>
+    <td class="eighthRow">TestTestTestTest</td>
+    <td class="secondRow" colspan="2" rowspan="2" style="text-align: right;">TestTestTestTest</td>
+    </tr>
+    <tr>
+        <td class="eighthRow">TestTestTestTest</td>
+        <td class="seventhRow">TestTestTestTest</td>
+        <td class="forthRow" style="text-align: center;background-color: #FFFF00;">TestTestTestTest</td>
+        <td class="thirdRow" style="text-align: center; background-color: #0000FF;">TestTestTestTest</td>
+    </tr>
+    <tr>
+        <td class="fristRow" colspan="6"><marquee direction="right">TestTestTestTest</marquee></td>
+    </tr>
+  </table>
+</textarea><br>
+
+    <center><button onclick="myFunction()">Copy text</button></center>
+
+    <script>
+      function myFunction() {
+        // Get the text field
+        var copyText = document.getElementById("myInput");
+
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+
+        // Alert the copied text
+        alert("Copied the text: " + copyText.value);
+      }
+    </script>
+    <h3><span style='font-size:30px;'>&#9755;</span> 2. Write Code to make this Form?</h3>
+    <form action="">
+      <fieldset>
+        <legend>Personalia:</legend>
+        <label for="testText">Name</label>
+        <input type="text" id="testText" name="testText" placeholder="Enter Your Name" required><br><br>
+        <label for="testEmail">Email address</label>
+        <input type="email" id="testEmail" name="testEmail" placeholder="Enter Your Email" required><br><br>
+        <label for="testPassword">Password</label>
+        <input type="password" id="testPassword" name="testPassword" placeholder="Type a Password" required><br><br>
+        
+        <label for="testNumber">Mobile Number</label>
+        <input type="number" id="testNumber" name="testNumber" placeholder="Enter Your Mobile Number" required><br><br>
+        <p>Choose your hobbies</p>
+        <input type="checkbox" id="hobby1" name="hobby1" value="coding">
+        <label for="hobby1"> Coding</label>
+        <input type="checkbox" id="hobby2" name="hobby2" value="cooking">
+        <label for="hobby2"> Cooking</label>
+        <input type="checkbox" id="hobby3" name="hobby3" value="playing">
+        <label for="hobby3"> Playing</label><br>
+        <input type="checkbox" id="hobby4" name="hobby4" value="Drawing">
+        <label for="hobby3"> Drawing</label>
+        <input type="checkbox" id="hobby5" name="hobby5" value="Dancing">
+        <label for="hobby3"> Dancing</label>
+        <input type="checkbox" id="hobby6" name="hobby6" value="Sleeping">
+        <label for="hobby3"> Sleeping</label><br><br>
+        <label for="testDate">Date of Birth</label>
+        <input type="date" id="testDate" name="testDate"><br><br>
+        Sex:
+        <input type="radio" id="male" name="sex" value="male">
+        <label for="male">MALE</label><br>
+        <input type="radio" id="female" name="sex" value="female">
+        <label for="female">FEMALE</label><br>
+        <label for="testAddress">Address:</label>
+        <textarea id="testAddress" name="testAddress" rows="4" cols="50"></textarea><br><br>
+        <label for="cars">Choose Your City:</label>
+        <select name="city" id="city">
+          <option value="Asansol">Asansol</option>
+          <option value="Pernem">Pernem</option>
+          <option value="Canacona">Canacona</option>
+          <option value="Durgapur">Durgapur</option>
+          <option value="Selcate">Selcate</option>
+          <option value="Darbondara">Darbondara</option>
+        </select>
+        <br>
+        <label for="testColor">Select Your Favorite Color</label>
+        <input type="color" id="testColor" name="testColor" value="#ff0000"><br><br>
+
+        <label for="bloodGr">Choose your Blood Group from the list:</label>
+      <input list="bldgr" name="bloodGr" id="bloodGr">
+      <datalist id="bldgr">
+        <option value="B (ve+)">
+        <option value="B (ve-)">
+        <option value="O (ve+)">
+        <option value="O (ve-)">
+        <option value="A (ve+)">
+        <option value="A (ve-)">
+        <option value="AB (ve-)">
+        <option value="AB (ve+)">  
+      </datalist><br><br>
+      <input type="reset">
+    <input type="button" value="Submit" onclick="msg()">
+    </form>
+
+    </fieldset>
+
+    
+    <br><br><br>
+    <hr>
+    <p
+      style="background-color:#48444b; color:#D6EEEE; text-align: center; font-family: 'Times New Roman', Times, serif;">
+      Copyright &copy; 2023-24|All Rights are Researved by i-Coding.</p>
+      <script>
+        function msg() {
+          alert("Weldone!");
+        }
+      </script>
+</body>
+
+</html>
