@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="image/fav.jpg" type="image/x-icon">
+  <title>Learn HTML - Forms </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="index.html" id="Intro">Introduction</a>
+    <a href="elements.html" id="Elements">Elements</a>
+    <a href="attributes.html" id="Attributes">Attributes</a>
+    <a href="heading.html" id="Headings">Headings</a>
+    <a href="paragraphs.html" id="Paragraphs">Paragraphs</a>
+    <a href="styles.html" id="Styles">Styles</a>
+    <a href="format.html" id="Format">Formatting</a>
+    <a href="quotation.html" id="Quotation">Quotation</a>
+    <a href="comments.html" id="Comments">Comments</a>
+    <a href="color.html" id="Colors">Colors</a>
+    <a href="css.html" id="CSS">CSS</a>
+    <a href="links.html" id="Links">Links</a>
+    <a href="images.html" id="Images">Images</a>
+    <a href="favicon.html" id="Favicon">Favicon</a>
+    <a href="title.html" id="Title">Page Title</a>
+    <a href="tables.html" id="Tables">Tables</a>
+    <a href="lists.html" id="Lists">Lists</a>
+    <a href="classes.html" id="Cla">Classes & ID</a>
+    <a href="iframes.html" id="Iframes">Iframes</a>
+    <a href="forms.html" id="Forms">Forms</a>
+    <a href="media.html" id="Media">Media</a>
+    <a href="entities.html" id="Entities">Entities</a>
+    <a href="tags.html" id="Tags">Tags</a>
+    <a href="quiz.html" id="Quiz">Quiz</a>
+
+  </div>
+
+  <div style="margin-left:180px;margin-right:190px;">
+    <h2><u>
+        <center>Learn HTML - Forms</center>
+      </u></h2>
+    <h2>The HTML &lt;form&gt; Elements</h2>
+    The HTML &lt;form&gt; element can contain one or more of the following form elements:
+    <ul>
+
+      <li>&lt;input&gt;</li>
+      <li>&lt;label&gt;</li>
+      <li>&lt;select&gt;</li>
+      <li>&lt;textarea&gt;</li>
+      <li>&lt;button&gt;</li>
+      <li>&lt;fieldset&gt;</li>
+      <li>&lt;legend&gt;</li>
+      <li>&lt;datalist&gt;</li>
+      <li>&lt;output&gt;</li>
+      <li>&lt;option&gt;</li>
+      <li>&lt;optgroup&gt;</li>
+    </ul>
+
+    <h2>HTML Input Types</h2>
+    <p>Here are the different input types you can use in HTML:</p>
+    <ul>
+      <li>&lt;input type="text"&gt;</li>
+      <li>&lt;input type="email"&gt;</li>
+      <li>&lt;input type="password"&gt;</li>
+      <li>&lt;input type="number"&gt;</li>
+      <li>&lt;input type="checkbox"&gt;</li>
+      <li>&lt;input type="radio"&gt;</li>
+      <li> &lt;input type="date"&gt;</li>
+      <li>&lt;input type="datetime-local"&gt;</li>
+      <li>&lt;input type="time"&gt;</li>
+      <li> &lt;input type="week"&gt;</li>
+      <li>&lt;input type="month"&gt;</li>
+      <li>&lt;input type="url"&gt;</li>
+      <li>&lt;input type="tel"&gt;</li>
+      <li>&lt;input type="file"&gt;</li>
+      <li>&lt;input type="image"&gt;</li>
+      <li>&lt;input type="color"&gt;</li>
+      <li> &lt;input type="hidden"&gt;</li>
+      <li>&lt;input type="range"&gt;</li>
+      <li>&lt;input type="search"&gt;</li>
+      <li>&lt;input type="reset"&gt;</li>
+      <li>&lt;input type="button"&gt;</li>
+      <li>&lt;input type="submit"&gt;</li>
+
+    </ul>
+
+    <br><br>
+    <!-- 1st element -->
+    <h1>Example of form elements</h1>
+    <hr>
+    <form>
+      <h3>Example of &lt;input type="text"&gt;</h3>
+      <label for="testText">Name</label>
+      <input type="text" id="testText" name="testText">
+      <h3>Code Below:</h3>
+      <textarea id="myInput1" rows="5" cols="152">
+          <form>
+              <label for="testText">Name</label>
+              <input type="text" id="testText" name="testText">
+          </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput1");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!--2nd/ next -->
+      <h3>Example of &lt;input type="email"&gt;</h3>
+      <label for="testEmail">Email address</label>
+      <input type="email" id="testEmail" name="testEmail"><br>
+      <h3>Code Below:</h3>
+      <textarea id="myInput2" rows="5" cols="152">
+        <form>
+            <label for="testEmail">Email address</label>
+            <input type="email" id="testEmail" name="testEmail">
+        </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput2");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!-- 3rd/next -->
+      <h3>Example of &lt;input type="password"&gt;</h3>
+      <label for="testPassword">Password</label>
+      <input type="password" id="testPassword" name="testPassword">
+      <h3>Code Below:</h3>
+      <textarea id="myInput3" rows="5" cols="152">
+            <form>
+                <label for="testPassword">Password</label>
+                <input type="password" id="testPassword" name="testPassword">
+            </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput3");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+
+      <!-- 4th/next -->
+      <h3>Example of &lt;input type="number"&gt;</h3>
+      <label for="testNumber">Number</label>
+      <input type="number" id="testNumber" name="testNumber">
+      <h3>Code Below:</h3>
+      <textarea id="myInput4" rows="5" cols="152">
+        <form>
+            <label for="testNumber">Number</label>
+            <input type="number" id="testNumber" name="testNumber">
+        </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput4");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!-- 5th/next -->
+      <h3>Example of &lt;input type="checkbox"&gt;</h3>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label>
+      <h3>Code Below:</h3>
+      <textarea id="myInput5" rows="8" cols="152">
+        <form>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1"> I have a bike</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label for="vehicle2"> I have a car</label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <label for="vehicle3"> I have a boat</label>
+        </form>
+        
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput5");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!-- 6th element -->
+
+      <h3>Example of &lt;input type="radio"&gt;</h3>
+      <p>Choose your favorite Web language:</p>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+      <h3>Code Below:</h3>
+      <textarea id="myInput6" rows="9" cols="152">
+        <p>Choose your favorite Web language:</p>
+
+        <form>
+          <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label>
+        </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput6");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!--7th/ next -->
+      <h3>Example of &lt;input type="date"&gt;</h3>
+      <label for="testDate">Date</label>
+      <input type="date" id="testDate" name="testTDate">
+      <h3>Code Below:</h3>
+      <textarea id="myInput7" rows="5" cols="152">
+        <form>
+            <label for="testDate">Date</label>
+            <input type="date" id="testDate" name="testDate">
+        </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput7");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!-- 8th/next -->
+      <h3>Example of &lt;input type="datetime-local"&gt;</h3>
+      <label for="testDdTt">Date and Time </label>
+      <input type="datetime-local" id="testDdTt" name="testDdTt">
+      <h3>Code Below:</h3>
+      <textarea id="myInput8" rows="5" cols="152">
+        <form>
+            <label for="testDdTt">Date and Time </label>
+            <input type="datetime-local" id="testDdTt" name="testDdTt">
+        </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput8");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+
+      <!-- 9th/next -->
+      <h3>Example of &lt;input type="time"&gt;</h3>
+      <label for="testTime">Time</label>
+      <input type="time" id="testTime" name="testTime">
+      <h3>Code Below:</h3>
+      <textarea id="myInput9" rows="5" cols="152">
+        <form>
+            <label for="testTime">Time</label>
+            <input type="time" id="testTime" name="testTime">
+        </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput9");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!-- 10th/next -->
+      <h3>Example of &lt;input type="week"&gt;</h3>
+      <label for="testWeek">Week</label>
+      <input type="week" id="testWeek" name="testWeek">
+      <h3>Code Below:</h3>
+      <textarea id="myInput10" rows="5" cols="152">
+          <form>
+            <label for="testWeek">Week</label>
+            <input type="week" id="testWeek" name="testWeek">
+          </form>
+        </textarea><br>
+
+      <center><button onclick="myFunction()">Copy text</button></center>
+
+      <script>
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput10");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+      </script>
+      <hr>
+      <!-- 11th element -->
+
+      <form>
+        <h3>Example of &lt;input type="month"&gt;</h3>
+        <label for="testMonth">Month</label>
+        <input type="month" id="testMonth" name="testMonth">
+        <h3>Code Below:</h3>
+        <textarea id="myInput11" rows="5" cols="152">
+            <form>
+              <label for="testMonth">Month</label>
+              <input type="month" id="testMonth" name="testMonth">
+            </form>
+        </textarea><br>
+
+        <center><button onclick="myFunction()">Copy text</button></center>
+
+        <script>
+          function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput11");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+          }
+        </script>
+        <hr>
+        <!--12th/ next -->
+        <h3>Example of &lt;input type="url"&gt;</h3>
+
+        <label for="homepage">Add your homepage:</label>
+        <input type="url" id="homepage" name="homepage">
+
+        <h3>Code Below:</h3>
+        <textarea id="myInput12" rows="5" cols="152">
+          <form>
+            <label for="homepage">Add your homepage:</label>
+            <input type="url" id="homepage" name="homepage">
+          </form>
+        </textarea><br>
+
+        <center><button onclick="myFunction()">Copy text</button></center>
+
+        <script>
+          function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput12");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+          }
+        </script>
+        <hr>
+        <!-- 13th/next -->
+        <h3>Example of &lt;input type="tel"&gt;</h3>
+
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+        <h3>Code Below:</h3>
+        <textarea id="myInput13" rows="5" cols="152">
+          <form>
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+          </form>
+        </textarea><br>
+
+        <center><button onclick="myFunction()">Copy text</button></center>
+
+        <script>
+          function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput13");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+          }
+        </script>
+        <hr>
+        <!-- 14th/next -->
+        <h3>Example of &lt;input type="file"&gt;</h3>
+
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile">
+
+        <h3>Code Below:</h3>
+        <textarea id="myInput14" rows="5" cols="152">
+          <form>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile">
+          </form>
+        </textarea><br>
+
+        <center><button onclick="myFunction()">Copy text</button></center>
+
+        <script>
+          function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput14");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+          }
+        </script>
+        <hr>
+        <!-- 15th/next -->
+        <h3>Example of &lt;input type="image"&gt;</h3>
+        <h5>The &lt;input type="image"&gt; defines an image as a submit button.</h5>
+
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name: </label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="image" src="image/img_submit.gif" alt="Submit" width="48" height="48">
+
+        <h3>Code Below:</h3>
+        <textarea id="myInput15" rows="7" cols="152">
+          <form action="">
+            <label for="fname">First name: </label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name: </label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+          </form>
+        </textarea><br>
+
+        <center><button onclick="myFunction()">Copy text</button></center>
+
+        <script>
+          function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput15");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+          }
+        </script>
+        <hr>
+        <!-- 16th element -->
+
+        <form>
+          <h3>Example of &lt;input type="color"&gt;</h3>
+          <label for="testColor">Select Your Favorite Color</label>
+          <input type="color" id="testColor" name="testColor" value="#ff0000">
+          <h3>Code Below:</h3>
+          <textarea id="myInput16" rows="5" cols="152">
+              <form action="">
+                <label for="testColor">Select Your Favorite Color</label>
+                <input type="color" id="testColor" name="testColor" value="#ff0000">
+              </form>
+        </textarea><br>
+
+          <center><button onclick="myFunction()">Copy text</button></center>
+
+          <script>
+            function myFunction() {
+              // Get the text field
+              var copyText = document.getElementById("myInput16");
+
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
+          <hr>
+          <!--17th/ next -->
+          <h3>Example of &lt;input type="hidden"&gt;</h3>
+
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <input type="hidden" id="custId" name="custId" value="3487">
+          <input type="submit" value="Submit">
+
+          <h3>Code Below:</h3>
+          <textarea id="myInput17" rows="6" cols="152">
+            <form action="">
+              <label for="fname">First name:</label>
+              <input type="text" id="fname" name="fname"><br><br>
+              <input type="hidden" id="custId" name="custId" value="3487">
+              <input type="submit" value="Submit">
+            </form>
+        </textarea><br>
+
+          <center><button onclick="myFunction()">Copy text</button></center>
+
+          <script>
+            function myFunction() {
+              // Get the text field
+              var copyText = document.getElementById("myInput17");
+
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
+          <hr>
+          <!-- 18th/next -->
+          <h3>Example of &lt;input type="range"&gt;</h3>
+          <form action="">
+            <label for="vol">Volume (between 0 and 50):</label>
+            <input type="range" id="vol" name="vol" min="0" max="50">
+            <input type="submit">
+          </form>
+          <h3>Code Below:</h3>
+          <textarea id="myInput18" rows="6" cols="152">
+            <form action="">
+              <label for="vol">Volume (between 0 and 50):</label>
+              <input type="range" id="vol" name="vol" min="0" max="50">
+              <input type="submit">
+            </form>
+        </textarea><br>
+
+          <center><button onclick="myFunction()">Copy text</button></center>
+
+          <script>
+            function myFunction() {
+              // Get the text field
+              var copyText = document.getElementById("myInput18");
+
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
+          <hr>
+          <!-- 19th/next -->
+          <h3>Example of &lt;input type="search"&gt;</h3>
+          <label for="testSearch">Search</label>
+          <input type="search" id="testSearch" name="testSearch">
+          <h3>Code Below:</h3>
+          <textarea id="myInput19" rows="5" cols="152">
+            <form action="">
+                <label for="testSearch">Search</label>
+                <input type="search" id="testSearch" name="testSearch">
+            </form>
+        </textarea><br>
+
+          <center><button onclick="myFunction()">Copy text</button></center>
+
+          <script>
+            function myFunction() {
+              // Get the text field
+              var copyText = document.getElementById("myInput19");
+
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
+          <hr>
+          <!-- 20th/next -->
+          <h3>Example of &lt;input type="reset"&gt;</h3>
+
+          <input type="reset">
+          <h3>Code Below:</h3>
+          <textarea id="myInput20" rows="5" cols="152">
+              <form action="">
+                <input type="reset">
+              </form>
+        </textarea><br>
+
+          <center><button onclick="myFunction()">Copy text</button></center>
+
+          <script>
+            function myFunction() {
+              // Get the text field
+              var copyText = document.getElementById("myInput20");
+
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
+          <hr>
+          <!-- 21st/next -->
+          <h3>Example of &lt;input type="button"&gt;</h3>
+          <h1>Show a Push Button</h1>
+
+          <p>The button below activates a JavaScript when it is clicked.</p>
+          <form>
+            <input type="button" value="Click me" onclick="msg()">
+
+
+            <script>
+              function msg() {
+                alert("Hello world!");
+              }
+            </script>
+            <h3>Code Below:</h3>
+            <textarea id="myInput21" rows="10" cols="152">
+            <form action="">
+            <h1>Show a Push Button</h1>
+
+            <p>The button below activates a JavaScript when it is clicked.</p>
+            <form>
+              <input type="button" value="Click me" onclick="msg()">
+            </form>
+            
+            <script>
+              function msg() {
+                alert("Hello world!");
+              }
+            </script>
+        </textarea><br>
+
+            <center><button onclick="myFunction()">Copy text</button></center>
+
+            <script>
+              function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myInput21");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+              }
+            </script>
+            <hr>
+            <!-- 22nd/next -->
+            <h3>Example of &lt;input type="submit"&gt;</h3>
+            <label for="testText">Name</label>
+            <input type="text" id="testText" name="testText">
+            <input type="submit" id="testSubmit" name="testSubmit">
+            <h3>Code Below:</h3>
+            <textarea id="myInput22" rows="5" cols="152">
+              <form action="">
+                <label for="testText">Name</label>
+                <input type="text" id="testText" name="testText">
+                <input type="submit" id="testSubmit" name="testSubmit">
+              </form>
+        </textarea><br>
+
+            <center><button onclick="myFunction()">Copy text</button></center>
+
+            <script>
+              function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myInput22");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+              }
+            </script>
+
+            <hr>
+            <!-- 23rd/next -->
+            <h1 style="color:#0000FF">Example of disabled, required and autofocus attribute</h1>
+
+
+            <form action="">
+              <label for="fname">First name:</label>
+              <input type="text" id="fname" name="fname" required autofocus><br><br>
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="lname" disabled><br><br>
+              <input type="submit" value="Submit">
+            </form>
+            <h3>Code Below:</h3>
+            <textarea id="myInput23" rows="8" cols="152">
+  <form action="">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" required autofocus><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" disabled><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</textarea><br>
+
+            <center><button onclick="myFunction()">Copy text</button></center>
+
+            <script>
+              function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myInput23");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+              }
+            </script>
+
+            <hr>
+            <!-- next -->
+            <h3>
+              Example<br></h3>
+            <h1 style="color:#0000FF">A drop-down list with autofocus:</h1>
+
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars" autofocus>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+
+            <input type="submit" value="Submit">
+            <br><br>
+            <h3>Code Below:</h3>
+            <textarea id="myInput24" rows="9" cols="152">
+  <form action="">
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars" autofocus>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    
+    <input type="submit" value="Submit">
+  </form>
+</textarea><br>
+
+            <center><button onclick="myFunction()">Copy text</button></center>
+
+            <script>
+              function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myInput24");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+              }
+            </script>
+            <hr>
+            <!-- next -->
+            <h3>
+              Example<br></h3>
+            <h1 style="color:#0000FF">The datalist element</h1>
+
+            <label for="browser">Choose your browser from the list:</label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+              <option value="Edge">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+            <input type="submit">
+
+
+            <br><br>
+            <h3>Code Below:</h3>
+            <textarea id="myInput25" rows="9" cols="152">
+    <form action="" method="">
+      <label for="browser">Choose your browser from the list:</label>
+      <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+      <input type="submit">
+    </form>
+  </textarea><br>
+
+            <center><button onclick="myFunction()">Copy text</button></center>
+
+            <script>
+              function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myInput25");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+              }
+            </script>
+            <hr>
+            <!-- next -->
+            <h3>
+              Example<br></h3>
+            <h1 style="color:#0000FF">The &lt;fieldset&gt; element with &lt;legend&gt;</h1>
+
+
+            <fieldset>
+              <legend>Personalia:</legend>
+              <label for="fname">First name:</label>
+              <input type="text" id="fname" name="fname"><br><br>
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="lname"><br><br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email"><br><br>
+              <label for="birthday">Birthday:</label>
+              <input type="date" id="birthday" name="birthday"><br><br>
+              <input type="submit" value="Submit">
+            </fieldset>
+
+
+
+            <br><br>
+            <h3>Code Below:</h3>
+            <textarea id="myInput26" rows="12" cols="152">
+    <form action="">
+      <fieldset>
+       <legend>Personalia:</legend>
+       <label for="fname">First name:</label>
+       <input type="text" id="fname" name="fname"><br><br>
+       <label for="lname">Last name:</label>
+       <input type="text" id="lname" name="lname"><br><br>
+       <label for="email">Email:</label>
+       <input type="email" id="email" name="email"><br><br>
+       <label for="birthday">Birthday:</label>
+       <input type="date" id="birthday" name="birthday"><br><br>
+       <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+  </textarea>
+
+            <center><button onclick="myFunction()">Copy text</button></center>
+
+            <script>
+              function myFunction() {
+                // Get the text field
+                var copyText = document.getElementById("myInput26");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+              }
+            </script>
+            <hr>
+
+<!-- next -->
+<h3>
+  Example<br></h3>
+<h1 style="color:#0000FF">
+  &lt;textarea&gt;</h1>
+  <label for="testAddress">Address:</label>
+  <textarea id="testAddress" name="testAddress" rows="4" cols="50">
+  </textarea>
+<br><br>
+<h3>Code Below:</h3>
+<textarea id="myInput27" rows="3" cols="152">
+  
+  <label for="testAddress">Address:</label>
+  <textarea id="testAddress" name="testAddress" rows="4" cols="50">
+  </textarea>
+
+</textarea>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+  function myFunction() {
+    // Get the text field
+    var copyText = document.getElementById("myInput27");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+  }
+</script>
+<hr>
+
+
+<!-- next -->
+<h3>
+  Example<br></h3>
+<h1 style="color:#0000FF">&lt;optgroup&gt;</h1>
+<p>The optgroup tag is used to group related options in a drop-down list:</p>
+
+  <label for="cars">Choose a car:</label>
+  <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </optgroup>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+<br><br>
+<h3>Code Below:</h3>
+<textarea id="myInput28" rows="15" cols="152">
+<form action="">
+  <label for="cars">Choose a car:</label>
+  <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </optgroup>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+</textarea>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+  function myFunction() {
+    // Get the text field
+    var copyText = document.getElementById("myInput28");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+  }
+</script>
+<hr>
+
+<!-- next -->
+<h3>
+  Example<br></h3>
+<h1 style="color:#0000FF">&lt;output&gt;</h1>
+<h1>The output element</h1>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="range" id="a" value="50">
++<input type="number" id="b" value="25">
+=<output name="x" for="a b"></output>
+</form>
+
+
+ 
+  
+<br><br>
+<h3>Code Below:</h3>
+<textarea id="myInput29" rows="6" cols="152">
+
+
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="range" id="a" value="50">
+  +<input type="number" id="b" value="25">
+  =<output name="x" for="a b"></output>
+  </form>
+  
+
+</textarea>
+
+<center><button onclick="myFunction()">Copy text</button></center>
+
+<script>
+  function myFunction() {
+    // Get the text field
+    var copyText = document.getElementById("myInput29");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + copyText.value);
+  }
+</script>
+<hr>
+
+
+
+          </form>
+  </div>
+  <br><br><br>
+  <hr>
+  <p style="background-color:#48444b; color:#D6EEEE; text-align: center; font-family: 'Times New Roman', Times, serif;">
+    Copyright &copy; 2023-24|All Rights are Researved by i-Coding.</p>
+
+</body>
+
+</html>
